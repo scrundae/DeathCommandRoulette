@@ -36,9 +36,16 @@ int main() {
         }
         else {
             printf("\nGame over.");
-
             remove(dir);
-            break;
+            #ifdef _WIN32
+                system("color c0");
+                _sleep(100);
+                system("color 07");
+                break;
+            #else
+                _sleep(1000);
+                break;
+            #endif
         }
     }
     return 0;
