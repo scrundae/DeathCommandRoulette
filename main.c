@@ -16,8 +16,7 @@ int main() {
     printf("\n**********************************");
     printair();
     printf("\nSign the waiver> ");
-    fgets(dir, sizeof(dir), stdin); // Use fgets to read a line of text
-    // Remove the newline character from the input
+    fgets(dir, sizeof(dir), stdin);
     dir[strcspn(dir, "\n")] = '\0';
     cls();
     printf("YOU SIGNED THE WAIVER.");
@@ -26,8 +25,7 @@ int main() {
     _sleep(1000);
     cls();
     printf("Enter the name of the file you want to put on the line> ");
-    fgets(dir, sizeof(dir), stdin); // Use fgets to read a line of text
-    // Remove the newline character from the input
+    fgets(dir, sizeof(dir), stdin);
     dir[strcspn(dir, "\n")] = '\0';
     while (true) {
         printf("\nPress the ENTER key to spin.");
@@ -37,7 +35,8 @@ int main() {
             printf("\nSafe...");
         }
         else {
-            printf("\nUnsafe!");
+            printf("\nGame over.");
+
             remove(dir);
             break;
         }
@@ -46,16 +45,16 @@ int main() {
 }
 
 int cls() {
-#ifdef _WIN32
-    system("cls");
-#elif __APPLE__
-    system("clear");
-#elif __linux__
-    system("clear");
-#else
-    printf("Unknown operating system. Could not proceed.");
-    return 1;
-#endif
+    #ifdef _WIN32
+        system("cls");
+    #elif __APPLE__
+        system("clear");
+    #elif __linux__
+        system("clear");
+    #else
+        printf("Unknown operating system. Could not proceed.");
+        return 1;
+    #endif
 }
 
 int printair() {
