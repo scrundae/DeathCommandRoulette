@@ -27,7 +27,7 @@ int main() {
     printf("\n| It's time to play... |");
     printf("\n+----------------------+");
     printair();
-    printf("Enter the name of the file you want to put on the line> ");
+    printf("\nEnter the name of the file you want to put on the line> ");
     fgets(dir, sizeof(dir), stdin);
     dir[strcspn(dir, "\n")] = '\0';
     while (true) {
