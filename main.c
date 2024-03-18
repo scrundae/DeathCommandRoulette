@@ -39,6 +39,7 @@ int main() {
                 system("color c0");
                 _sleep(100);
                 system("color 07");
+                _sleep(100);
                 break;
             #else
                 _sleep(1000);
