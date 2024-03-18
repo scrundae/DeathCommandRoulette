@@ -12,6 +12,7 @@ int main() {
     printf("+------------------------+");
     printf("\n| Death Command Roulette |");
     printf("\n+------------------------+");
+    //printf("\a");
     printair();
     printf("\nSign the waiver> ");
     fgets(dir, sizeof(dir), stdin);
@@ -22,6 +23,10 @@ int main() {
     printf("\nNOW. PLAY.");
     _sleep(1000);
     cls();
+    printf("+----------------------+");
+    printf("\n| It's time to play... |");
+    printf("\n+----------------------+");
+    printair();
     printf("Enter the name of the file you want to put on the line> ");
     fgets(dir, sizeof(dir), stdin);
     dir[strcspn(dir, "\n")] = '\0';
