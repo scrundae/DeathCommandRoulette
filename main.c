@@ -9,11 +9,9 @@ char dir[10000];
 int main() {
     srand(time(NULL));
     cls();
-    printf("**********************************");
-    printair();
-    printf("\nWelcome to death command roulette.");
-    printair();
-    printf("\n**********************************");
+    printf("+------------------------+");
+    printf("\n| Death Command Roulette |");
+    printf("\n+------------------------+");
     printair();
     printf("\nSign the waiver> ");
     fgets(dir, sizeof(dir), stdin);
